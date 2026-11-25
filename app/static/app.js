@@ -1,3 +1,4 @@
+const API_BASE_URL = 'https://expando-guide.onrender.com';
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const state={token:localStorage.getItem('expando_token'),user:null,page:'landing',projectId:null,assessmentStep:0,assessment:{},assessmentQuestions:[],country:'SG',countryCategory:'general',shippingResult:null};
 const api=async(path,opts={})=>{const headers={...(opts.headers||{})};if(state.token)headers.Authorization='Bearer '+state.token;if(opts.body&&!(opts.body instanceof FormData))headers['Content-Type']='application/json';const res=await fetch(path,{...opts,headers});const type=res.headers.get('content-type')||'';const data=type.includes('json')?await res.json():await res.text();if(!res.ok){let msg=data.detail||data.message||'Terjadi kesalahan';if(Array.isArray(msg))msg=msg.map(x=>x.msg||JSON.stringify(x)).join('; ');const err=new Error(msg);err.status=res.status;throw err}return data};
