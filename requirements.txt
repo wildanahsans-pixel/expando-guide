@@ -6,3 +6,4 @@ email-validator==2.2.0
 pypdf==5.4.0
 python-dotenv==1.1.0
 openpyxl==3.1.5
+psycopg2-binary
