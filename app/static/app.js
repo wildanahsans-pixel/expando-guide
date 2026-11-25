@@ -105,7 +105,7 @@ function landing() {
 
                 <div class="price-card popular">
                     <span class="badge green">PREMIUM</span>
-                    <div class="price">Rp49,000 <small>/ month</small></div>
+                    <div class="price">Rp99,000 <small>/ month</small></div>
                     <ul class="check-list">
                         <li>Up to 10 projects</li>
                         <li>Unlimited assessments</li>
@@ -122,7 +122,7 @@ function landing() {
     <span class="badge green">PREMIUM ANNUAL</span>
 
     <div class="price">
-        Rp490,000 <small>/ year</small>
+        Rp890,000 <small>/ year</small>
     </div>
 
     <ul class="check-list">
